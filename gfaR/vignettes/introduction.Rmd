@@ -22,6 +22,10 @@ library(gfaR)
 
 `gfaR` is an R package for finding non-B DNA motifs in genomic sequences. It is a refactored version of the Genomic Feature Analyzer (GFA) C-program.
 
+Regina Z. Cer, Duncan E. Donohue, Uma S. Mudunuri, Nuri A. Temiz, Michael A. Loss, Nathan J. Starner, Goran N. Halusa, Natalia Volfovsky, Ming Yi, Brian T. Luke, Albino Bacolla, Jack R. Collins and Robert M. Stephens.
+
+Nucl. Acids Res. (2013) 41 (D1): D94-D100. doi: 10.1093/nar/gks955 
+
 ## Supported Motifs
 
 The package can detect the following motif types:
@@ -56,3 +60,7 @@ print(apr_results)
 ## References
 
 - Non-B DB v2.0: a database of predicted non-B DNA-forming motifs and its associated tools. Nucleic Acids Res. 2016.
+
+Regina Z. Cer, Duncan E. Donohue, Uma S. Mudunuri, Nuri A. Temiz, Michael A. Loss, Nathan J. Starner, Goran N. Halusa, Natalia Volfovsky, Ming Yi, Brian T. Luke, Albino Bacolla, Jack R. Collins and Robert M. Stephens.
+
+Nucl. Acids Res. (2013) 41 (D1): D94-D100. doi: 10.1093/nar/gks955 
