@@ -31,5 +31,9 @@ This function identifies potential G-quadruplex (GQ) motifs in a DNA sequence.
 G-quadruplexes are four-stranded DNA structures formed by G-rich sequences.
 }
 \examples{
-find_gq("GGGAAGGAGGGAGAGACGGGAGGG")
+# Example 1: Sequence containing a G-quadruplex
+find_gq("GGGAAGGAGGGAGAGACGGGAGGGN")
+
+# Example 2: Sequence with no G-quadruplexes
+find_gq("ATATATATATATATATATAT")
 }

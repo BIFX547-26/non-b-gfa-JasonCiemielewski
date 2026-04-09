@@ -25,7 +25,11 @@
 #' }
 #'
 #' @examples
-#' find_apr("TTTTGAAGAGGAAATGAAGGGTATT")
+#' # Example 1: Sequence containing an APR
+#' find_apr("ttttgaagaggaaatgaagggtattN")
+#' 
+#' # Example 2: Sequence with no APRs
+#' find_apr("GCGCGCGCGCGCGCGCGCGC")
 #' @export
 find_apr <- function(dna_seq, minAPR = 3, maxAPR = 9, minATracts = 3) {
     # Input validation: Ensure sequence is character
@@ -60,7 +64,11 @@ find_apr <- function(dna_seq, minAPR = 3, maxAPR = 9, minATracts = 3) {
 #' }
 #'
 #' @examples
-#' find_dr("ACCCCTACCCCTACCCCTACCCC")
+#' # Example 1: Sequence containing a Direct Repeat
+#' find_dr("ACCCCTACCCCTACCCCTACCCCN", mindir = 5)
+#' 
+#' # Example 2: Sequence with no Direct Repeats
+#' find_dr("ATGCATGCATGC", mindir = 10)
 #' @export
 find_dr <- function(dna_seq, mindir = 10, maxdir = 300, dspacer = 10) {
     # Input validation: Ensure sequence is character
@@ -93,7 +101,11 @@ find_dr <- function(dna_seq, mindir = 10, maxdir = 300, dspacer = 10) {
 #' }
 #'
 #' @examples
-#' find_gq("GGGAAGGAGGGAGAGACGGGAGGG")
+#' # Example 1: Sequence containing a G-quadruplex
+#' find_gq("GGGAAGGAGGGAGAGACGGGAGGGN")
+#' 
+#' # Example 2: Sequence with no G-quadruplexes
+#' find_gq("ATATATATATATATATATAT")
 #' @export
 find_gq <- function(dna_seq, minGQ = 3, maxGQspacer = 7) {
     # Input validation: Ensure sequence is character
@@ -129,7 +141,11 @@ find_gq <- function(dna_seq, minGQ = 3, maxGQspacer = 7) {
 #' }
 #'
 #' @examples
-#' find_ir("GCTAGCAAAAAATGCTAGC")
+#' # Example 1: Sequence containing an Inverted Repeat
+#' find_ir("GCGCGCGCGCATATGCGCGCGCGC")
+#' 
+#' # Example 2: Sequence with no Inverted Repeats
+#' find_ir("AAAAAAAAAAAAAAAAAAAA")
 #' @export
 find_ir <- function(dna_seq, mincrf = 6, cspacer = 100, cut = 9, shortSpacer = 4) {
     # Input validation: Ensure sequence is character
@@ -163,7 +179,11 @@ find_ir <- function(dna_seq, mincrf = 6, cspacer = 100, cut = 9, shortSpacer = 4
 #' }
 #'
 #' @examples
-#' find_mr("CCCCGCCGCCCGCCCGCCGCCCC")
+#' # Example 1: Sequence containing a Mirror Repeat
+#' find_mr("CCCCGCCGCCCGCCCGCCGCCCCN")
+#' 
+#' # Example 2: Sequence with no Mirror Repeats
+#' find_mr("ATGCATGCATGCATGC")
 #' @export
 find_mr <- function(dna_seq, minmir = 10, mspacer = 100) {
     # Input validation: Ensure sequence is character
@@ -199,7 +219,11 @@ find_mr <- function(dna_seq, minmir = 10, mspacer = 100) {
 #' }
 #'
 #' @examples
+#' # Example 1: Sequence containing an STR (GT repeats)
 #' find_str("GTGTGTGTGTGT")
+#' 
+#' # Example 2: Sequence with no STRs
+#' find_str("ATGCATGCATGC", minReps = 10)
 #' @export
 find_str <- function(dna_seq, minSTR = 1, maxSTR = 9, minSTRlen = 10, minReps = 3) {
     # Input validation: Ensure sequence is character
@@ -232,7 +256,11 @@ find_str <- function(dna_seq, minSTR = 1, maxSTR = 9, minSTRlen = 10, minReps = 
 #' }
 #'
 #' @examples
-#' find_zdna("GTGCACGCGTGCGTG")
+#' # Example 1: Sequence containing a Z-DNA motif
+#' find_zdna("gtgcacgcgtgcgtgN")
+#' 
+#' # Example 2: Sequence with no Z-DNA motifs
+#' find_zdna("AAAAAAAAAAAAAA")
 #' @export
 find_zdna <- function(dna_seq, minZ = 10) {
     # Input validation: Ensure sequence is character

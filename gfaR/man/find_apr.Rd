@@ -31,8 +31,14 @@ A data.frame containing the detected APRs with columns:
 \description{
 This function identifies A-Phased Repeats (APRs) in a DNA sequence. APRs are
 associated with bent DNA structures and are characterized by runs of
-Adenine (A) or Thymine (T) bases with a specific periodicity.
+Adenine (A) or Thymine (T) bases with a specific periodicity. The function
+internally searches for both A-tracts and T-tracts by analyzing both the
+forward and reverse-complement strands.
 }
 \examples{
-find_apr("TTTTGAAGAGGAAATGAAGGGTATT")
+# Example 1: Sequence containing an APR
+find_apr("ttttgaagaggaaatgaagggtattN")
+
+# Example 2: Sequence with no APRs
+find_apr("GCGCGCGCGCGCGCGCGCGC")
 }

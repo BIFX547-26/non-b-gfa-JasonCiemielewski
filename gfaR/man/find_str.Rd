@@ -36,5 +36,9 @@ a DNA sequence. STRs consist of short repeating units (1-9 bp) occurring
 multiple times in tandem.
 }
 \examples{
+# Example 1: Sequence containing an STR (GT repeats)
 find_str("GTGTGTGTGTGT")
+
+# Example 2: Sequence with no STRs
+find_str("ATGCATGCATGC", minReps = 10)
 }

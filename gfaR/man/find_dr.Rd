@@ -34,5 +34,9 @@ associated with slipped-strand DNA structures and consist of two or more
 identical or nearly identical sequences in the same orientation.
 }
 \examples{
-find_dr("ACCCCTACCCCTACCCCTACCCC")
+# Example 1: Sequence containing a Direct Repeat
+find_dr("ACCCCTACCCCTACCCCTACCCCN", mindir = 5)
+
+# Example 2: Sequence with no Direct Repeats
+find_dr("ATGCATGCATGC", mindir = 10)
 }

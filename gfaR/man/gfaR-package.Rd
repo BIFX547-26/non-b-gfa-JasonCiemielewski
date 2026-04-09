@@ -6,6 +6,6 @@
 \alias{gfaR-package}
 \title{gfaR: Genomic Feature Analyzer for Non-B DNA Motifs}
 \description{
-Refactored R package version of the Genomic Feature Analyzer (GFA) C-program for finding non-B DNA motifs in nucleic acid sequences.
+Refactored R package version of the Genomic Feature Analyzer (GFA) C-program for finding non-B DNA motifs in nucleic acid sequences. The original GFA citation is Regina Z. Cer, Duncan E. Donohue, Uma S. Mudunuri, Nuri A. Temiz, Michael A. Loss, Nathan J. Starner, Goran N. Halusa, Natalia Volfovsky, Ming Yi, Brian T. Luke, Albino Bacolla, Jack R. Collins and Robert M. Stephens. Nucl. Acids Res. (2013) 41 (D1): D94-D100. doi: 10.1093/nar/gks955.
 }
 \keyword{internal}

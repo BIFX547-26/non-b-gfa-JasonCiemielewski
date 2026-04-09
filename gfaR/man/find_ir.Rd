@@ -36,5 +36,9 @@ associated with cruciform DNA structures and consist of two sequences that
 are reverse complements of each other.
 }
 \examples{
-find_ir("GCTAGCAAAAAATGCTAGC")
+# Example 1: Sequence containing an Inverted Repeat
+find_ir("GCGCGCGCGCATATGCGCGCGCGC")
+
+# Example 2: Sequence with no Inverted Repeats
+find_ir("AAAAAAAAAAAAAAAAAAAA")
 }

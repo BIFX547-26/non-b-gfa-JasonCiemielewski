@@ -30,5 +30,9 @@ is a left-handed helical structure favored by alternating purine-pyrimidine
 sequences, especially (CG)n.
 }
 \examples{
-find_zdna("GTGCACGCGTGCGTG")
+# Example 1: Sequence containing a Z-DNA motif
+find_zdna("gtgcacgcgtgcgtgN")
+
+# Example 2: Sequence with no Z-DNA motifs
+find_zdna("AAAAAAAAAAAAAA")
 }

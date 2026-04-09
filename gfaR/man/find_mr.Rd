@@ -32,5 +32,9 @@ associated with triplex DNA structures and consist of two identical
 sequences in reverse orientation on the same strand.
 }
 \examples{
-find_mr("CCCCGCCGCCCGCCCGCCGCCCC")
+# Example 1: Sequence containing a Mirror Repeat
+find_mr("CCCCGCCGCCCGCCCGCCGCCCCN")
+
+# Example 2: Sequence with no Mirror Repeats
+find_mr("ATGCATGCATGCATGC")
 }
