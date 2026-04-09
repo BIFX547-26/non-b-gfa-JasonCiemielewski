@@ -5,7 +5,11 @@ library(gfaR)
 fasta_file <- "test_data/gfa_test.fasta"
 c_src_dir  <- "gfa_c_program"
 c_program  <- file.path(c_src_dir, "gfa.exe")
-output_prefix <- "test_data/c_output"
+
+# Define and create output directory
+output_dir <- "test_data/comparison_results"
+if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
+output_prefix <- file.path(output_dir, "c_output")
 
 # 2. Auto-compile C program if missing
 if (!file.exists(c_program)) {
@@ -16,11 +20,8 @@ if (!file.exists(c_program)) {
                  "print_tsv_file.c", "print_usage.c", "process_repeats.c", 
                  "rcdna.c", "read_fasta.c", "read_mult_fasta.c")
     
-    # Attempt to find gcc (common in Rtools on Windows)
     gcc_path <- "gcc"
-    # Check if we are on Windows and need to look for Rtools
     if (.Platform$OS.type == "windows") {
-        # This is a common path for Rtools45, matching your environment
         gcc_hint <- "C:/rtools45/x86_64-w64-mingw32.static.posix/bin/gcc.exe"
         if (file.exists(gcc_hint)) gcc_path <- gcc_hint
     }
