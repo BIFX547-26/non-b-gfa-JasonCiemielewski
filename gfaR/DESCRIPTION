@@ -1,0 +1,13 @@
+Package: gfaR
+Type: Package
+Title: Genomic Feature Analyzer for Non-B DNA Motifs
+Version: 0.1.0
+Author: Jason Ciemielewski
+Maintainer: Jason Ciemielewski <jason@example.com>
+Description: Refactored R package version of the Genomic Feature Analyzer (GFA) C-program for finding non-B DNA motifs in nucleic acid sequences.
+License: MIT
+Encoding: UTF-8
+Imports: Rcpp
+LinkingTo: Rcpp
+Suggests: testthat (>= 3.0.0)
+RoxygenNote: 7.3.3

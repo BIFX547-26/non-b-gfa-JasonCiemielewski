@@ -1,0 +1,58 @@
+---
+title: "Introduction to gfaR"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to gfaR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(gfaR)
+```
+
+## Overview
+
+`gfaR` is an R package for finding non-B DNA motifs in genomic sequences. It is a refactored version of the Genomic Feature Analyzer (GFA) C-program.
+
+## Supported Motifs
+
+The package can detect the following motif types:
+
+- **A-Phased Repeats (APR)**: Associated with bent DNA.
+- **Direct Repeats (DR)**: Associated with slipped DNA.
+- **G-quadruplexes (GQ)**: Associated with four-stranded structures.
+- **Inverted Repeats (IR)**: Associated with cruciforms.
+- **Mirror Repeats (MR)**: Associated with triplexes.
+- **Short Tandem Repeats (STR)**: Short repeating units.
+- **Z-DNA**: Left-handed DNA helices.
+
+## Usage
+
+To analyze a sequence, use the `gfa_analyze` function:
+
+```{r example}
+sequence <- "AGTGCAACCCAGAGGGCAGGATTTCCTGCTGGACTTTGAAATCCAACCCGGTCACCTACCCGCGCGACTG"
+results <- gfa_analyze(sequence)
+
+# View detected G-quadruplexes
+print(results$gq)
+```
+
+You can also call individual finding functions:
+
+```{r individual}
+apr_results <- find_apr(sequence)
+print(apr_results)
+```
+
+## References
+
+- Non-B DB v2.0: a database of predicted non-B DNA-forming motifs and its associated tools. Nucleic Acids Res. 2016.
