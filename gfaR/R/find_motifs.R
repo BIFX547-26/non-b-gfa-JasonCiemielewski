@@ -3,7 +3,9 @@
 #' @description
 #' This function identifies A-Phased Repeats (APRs) in a DNA sequence. APRs are
 #' associated with bent DNA structures and are characterized by runs of
-#' Adenine (A) or Thymine (T) bases with a specific periodicity.
+#' Adenine (A) or Thymine (T) bases with a specific periodicity. The function
+#' internally searches for both A-tracts and T-tracts by analyzing both the
+#' forward and reverse-complement strands.
 #'
 #' @param dna_seq A character string representing the DNA sequence to analyze.
 #' @param minAPR Minimum length of an A-tract (default: 3).
