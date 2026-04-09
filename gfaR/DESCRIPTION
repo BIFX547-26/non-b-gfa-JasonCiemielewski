@@ -11,7 +11,7 @@ Description: Refactored R package version of the Genomic Feature Analyzer (GFA)
     Volfovsky, Ming Yi, Brian T. Luke, Albino Bacolla, Jack R. Collins and 
     Robert M. Stephens. Nucl. Acids Res. (2013) 41 (D1): D94-D100. 
     doi: 10.1093/nar/gks955.
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: Rcpp
 LinkingTo: Rcpp
