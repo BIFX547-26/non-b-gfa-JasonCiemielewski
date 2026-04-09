@@ -1,0 +1,5 @@
+##gff-version 3
+Test	ABCC	Direct_Repeat	71	93	.	+	.	ID=Test_71_93_DR;spacer=1;repeat=11;x1+0;composition=2A/8C/0G/1T;sequence=acccctacccctacccctacccc;subset=0
+Test	ABCC	Direct_Repeat	2846	2866	.	+	.	ID=Test_2846_2866_DR;spacer=1;repeat=10;x1+0;composition=0A/8C/2G/0T;sequence=cccgccgcccgcccgccgccc;subset=0
+Test	ABCC	Direct_Repeat	2870	2895	.	+	.	ID=Test_2870_2895_DR;spacer=6;repeat=10;x1+0;composition=0A/8C/2G/0T;sequence=cccccggcccggccgccccccggccc;subset=0
+Test	ABCC	Direct_Repeat	4288	4317	.	+	.	ID=Test_4288_4317_DR;spacer=10;repeat=10;x1+0;composition=0A/6C/2G/2T;sequence=ccggcctcctcgacctcctcccggcctcct;subset=0

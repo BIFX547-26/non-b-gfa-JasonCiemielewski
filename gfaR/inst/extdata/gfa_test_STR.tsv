@@ -1,0 +1,8 @@
+Sequence_name	Source	Type	Start	Stop	Length	Score	Strand	Repeat	Spacer	Repeated	Subset	Composition	Sequence
+Test	ABCC	Short_Tandem_Repeat	71	93	23	NA	+	6	1	X3+5	NA	1A/4C/0G/1T	acccctacccctacccctacccc
+Test	ABCC	Short_Tandem_Repeat	1652	1661	10	NA	+	1	4	X10+0	NA	0A/0C/0G/1T	tttttttttt
+Test	ABCC	Short_Tandem_Repeat	2603	2614	12	NA	+	2	3	X6+0	NA	0A/0C/1G/1T	gtgtgtgtgtgt
+Test	ABCC	Short_Tandem_Repeat	2739	2749	11	NA	+	3	0	X3+2	NA	0A/2C/1G/0T	ccgccgccgcc
+Test	ABCC	Short_Tandem_Repeat	2850	2862	13	NA	+	4	1	X3+1	NA	0A/3C/1G/0T	ccgcccgcccgcc
+Test	ABCC	Short_Tandem_Repeat	4007	4016	10	NA	+	3	0	X3+1	NA	2A/1C/0G/0T	caacaacaac
+Test	ABCC	Short_Tandem_Repeat	4482	4491	10	NA	+	3	6	X3+1	NA	0A/0C/2G/1T	gtggtggtgg

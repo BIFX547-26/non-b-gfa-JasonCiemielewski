@@ -1,0 +1,8 @@
+Sequence_name	Source	Type	Start	Stop	Length	Score	Strand	Repeat	Spacer	nIslands/nRuns/maxGQ	Subset	Composition	Sequence
+Test	ABCC	G_Quadruplex_Motif	5305	5328	24	NA	+	3	NA	4I/4R/3M	NA	7A/1C/15G/0T	gggaaggagggagagacgggaggg
+Test	ABCC	G_Quadruplex_Motif	6179	6214	36	NA	+	3	NA	6I/6R/3M	NA	1A/6C/23G/5T	gggctggggctgggtgagggtggcgggcctgcgggg
+Test	ABCC	G_Quadruplex_Motif	72	102	31	NA	-	4	NA	5I/5R/4M	NA	4A/2C/20G/5T	gggttgcacggggtaggggtaggggtagggg
+Test	ABCC	G_Quadruplex_Motif	2728	2768	41	NA	-	3	NA	5I/5R/3M	NA	0A/13C/28G/0T	gggggcccgggggcgcgcgggcggcggcggggcccggcggg
+Test	ABCC	G_Quadruplex_Motif	2832	2926	95	NA	-	3	NA	14I/14R/3M	NA	3A/26C/65G/1T	ggggagggccccgagggcgcgggccggccgggggccggggggcggccgggccgggggacggggcggcgggcgggcggcggggtgcggggcgcggg
+Test	ABCC	G_Quadruplex_Motif	5195	5219	25	NA	-	3	NA	4I/4R/3M	NA	2A/3C/18G/2T	gggcagggggtgggcgtggcagggg
+Test	ABCC	G_Quadruplex_Motif	5701	5736	36	NA	-	3	NA	5I/5R/3M	NA	8A/4C/20G/4T	ggggcagaggggtaaggtagggctcacagggatggg

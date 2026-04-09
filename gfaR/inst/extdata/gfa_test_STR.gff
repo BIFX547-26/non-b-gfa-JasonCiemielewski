@@ -1,0 +1,8 @@
+##gff-version 3
+Test	ABCC	Short_Tandem_Repeat	71	93	.	+	.	ID=Test_71_93_STR;length=6;x3+5;type=1;composition=1A/4C/0G/1T;sequence=acccctacccctacccctacccc
+Test	ABCC	Short_Tandem_Repeat	1652	1661	.	+	.	ID=Test_1652_1661_STR;length=1;x10+0;type=4;composition=0A/0C/0G/1T;sequence=tttttttttt
+Test	ABCC	Short_Tandem_Repeat	2603	2614	.	+	.	ID=Test_2603_2614_STR;length=2;x6+0;type=3;composition=0A/0C/1G/1T;sequence=gtgtgtgtgtgt
+Test	ABCC	Short_Tandem_Repeat	2739	2749	.	+	.	ID=Test_2739_2749_STR;length=3;x3+2;type=0;composition=0A/2C/1G/0T;sequence=ccgccgccgcc
+Test	ABCC	Short_Tandem_Repeat	2850	2862	.	+	.	ID=Test_2850_2862_STR;length=4;x3+1;type=1;composition=0A/3C/1G/0T;sequence=ccgcccgcccgcc
+Test	ABCC	Short_Tandem_Repeat	4007	4016	.	+	.	ID=Test_4007_4016_STR;length=3;x3+1;type=0;composition=2A/1C/0G/0T;sequence=caacaacaac
+Test	ABCC	Short_Tandem_Repeat	4482	4491	.	+	.	ID=Test_4482_4491_STR;length=3;x3+1;type=6;composition=0A/0C/2G/1T;sequence=gtggtggtgg

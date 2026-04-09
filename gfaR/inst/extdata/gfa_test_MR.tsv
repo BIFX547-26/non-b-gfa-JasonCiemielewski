@@ -1,0 +1,6 @@
+Sequence_name	Source	Type	Start	Stop	Length	Score	Strand	Repeat	Spacer	Permutations	Subset	Composition	Sequence
+Test	ABCC	Mirror_Repeat	2827	2864	38	NA	+	10	18	1	0	0A/7C/3G/0T	cgccgcccgcgccccgcaccccgccgcccgcccgccgc
+Test	ABCC	Mirror_Repeat	2845	2867	23	NA	+	11	1	1	0	0A/9C/2G/0T	ccccgccgcccgcccgccgcccc
+Test	ABCC	Mirror_Repeat	2870	2897	28	NA	+	10	8	1	0	0A/8C/2G/0T	cccccggcccggccgccccccggccccc
+Test	ABCC	Mirror_Repeat	2937	2966	30	NA	+	12	6	1	0	0A/8C/3G/1T	gtgccccccgcctgaccgccgccccccgtg
+Test	ABCC	Mirror_Repeat	3014	3065	52	NA	+	10	32	1	0	5A/1C/4G/0T	gaagaagagcgccgagaacggcatctatagcgtgtccggcgacgagaagaag

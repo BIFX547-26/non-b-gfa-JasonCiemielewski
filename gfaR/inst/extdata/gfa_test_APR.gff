@@ -1,0 +1,2 @@
+##gff-version 3
+Test	ABCC	A_Phased_Repeat	582	606	.	+	.	ID=Test_582_606_APR;tracts=3;composition=9A/0C/8G/7T;sequence=ttttgaagaggaaatgaagggtatt

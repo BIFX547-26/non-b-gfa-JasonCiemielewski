@@ -1,0 +1,8 @@
+##gff-version 3
+Test	ABCC	G_Quadruplex_Motif	5305	5328	.	+	.	ID=Test_5305_5328_GQ;islands=4;runs=4;max=3;composition=7A/1C/15G/0T;sequence=gggaaggagggagagacgggaggg
+Test	ABCC	G_Quadruplex_Motif	6179	6214	.	+	.	ID=Test_6179_6214_GQ;islands=6;runs=6;max=3;composition=1A/6C/23G/5T;sequence=gggctggggctgggtgagggtggcgggcctgcgggg
+Test	ABCC	G_Quadruplex_Motif	72	102	.	-	.	ID=Test_72_102_GQ;islands=5;runs=5;max=4;composition=4A/2C/20G/5T;sequence=gggttgcacggggtaggggtaggggtagggg
+Test	ABCC	G_Quadruplex_Motif	2728	2768	.	-	.	ID=Test_2728_2768_GQ;islands=5;runs=5;max=3;composition=0A/13C/28G/0T;sequence=gggggcccgggggcgcgcgggcggcggcggggcccggcggg
+Test	ABCC	G_Quadruplex_Motif	2832	2926	.	-	.	ID=Test_2832_2926_GQ;islands=14;runs=14;max=3;composition=3A/26C/65G/1T;sequence=ggggagggccccgagggcgcgggccggccgggggccggggggcggccgggccgggggacggggcggcgggcgggcggcggggtgcggggcgcggg
+Test	ABCC	G_Quadruplex_Motif	5195	5219	.	-	.	ID=Test_5195_5219_GQ;islands=4;runs=4;max=3;composition=2A/3C/18G/2T;sequence=gggcagggggtgggcgtggcagggg
+Test	ABCC	G_Quadruplex_Motif	5701	5736	.	-	.	ID=Test_5701_5736_GQ;islands=5;runs=5;max=3;composition=8A/4C/20G/4T;sequence=ggggcagaggggtaaggtagggctcacagggatggg

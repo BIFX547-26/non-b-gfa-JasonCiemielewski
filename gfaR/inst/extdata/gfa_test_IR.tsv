@@ -1,0 +1,15 @@
+Sequence_name	Source	Type	Start	Stop	Length	Score	Strand	Repeat	Spacer	Permutations	Subset	Composition	Sequence
+Test	ABCC	Inverted_Repeat	16	29	14	NA	+	6	2	1	0	2A/1C/3G/0T	gcaggatttcctgc
+Test	ABCC	Inverted_Repeat	108	121	14	NA	+	6	2	1	0	2A/1C/3G/0T	gcaggatttcctgc
+Test	ABCC	Inverted_Repeat	542	555	14	NA	+	6	2	1	0	2A/2C/2G/0T	aggcaccagtgcct
+Test	ABCC	Inverted_Repeat	813	826	14	NA	+	6	2	1	0	1A/0C/2G/3T	tttggatttccaaa
+Test	ABCC	Inverted_Repeat	2251	2267	17	NA	+	7	3	1	0	3A/2C/1G/1T	acaagtcaaagacttgt
+Test	ABCC	Inverted_Repeat	2370	2391	22	NA	+	10	2	1	1	4A/0C/1G/5T	aattttagtagttactaaaatt
+Test	ABCC	Inverted_Repeat	2889	2903	15	NA	+	6	3	1	0	0A/4C/2G/0T	ccggcccccggccgg
+Test	ABCC	Inverted_Repeat	3084	3099	16	NA	+	6	4	1	0	0A/3C/3G/0T	gggcccgacggggccc
+Test	ABCC	Inverted_Repeat	3515	3528	14	NA	+	7	0	1	0	2A/3C/2G/0T	ggccacatgtggcc
+Test	ABCC	Inverted_Repeat	4686	4786	101	NA	+	10	81	1	0	1A/1C/6G/2T	atgggctgggccttcgccctgtcctccatgctgtgcgtgccgctgcacctcctgggctgcctcctcagggccaagcgctggcagcacctgacccagcccat
+Test	ABCC	Inverted_Repeat	4830	4843	14	NA	+	6	2	1	0	1A/1C/3G/1T	gtcaggggcctgac
+Test	ABCC	Inverted_Repeat	5144	5158	15	NA	+	6	3	1	0	1A/2C/2G/1T	ctaggccccgcctag
+Test	ABCC	Inverted_Repeat	5253	5268	16	NA	+	6	4	1	0	1A/0C/4G/1T	gggtgacccctcaccc
+Test	ABCC	Inverted_Repeat	5446	5461	16	NA	+	6	4	1	0	2A/2C/2G/0T	ggaaccttctggttcc

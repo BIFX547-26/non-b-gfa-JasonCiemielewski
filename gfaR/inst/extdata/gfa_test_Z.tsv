@@ -1,0 +1,5 @@
+Sequence_name	Source	Type	Start	Stop	Length	Score	Strand	Repeat	Spacer	KVScore	Subset	Composition	Sequence
+Test	ABCC	Z_DNA_Motif	2603	2614	12	NA	+	12	NA	16	0	0A/0C/6G/5T	gtgtgtgtgtgt
+Test	ABCC	Z_DNA_Motif	5506	5520	15	NA	+	15	NA	87	1	1A/4C/6G/3T	gtgcacgcgtgcgtg
+Test	ABCC	Z_DNA_Motif	5799	5808	10	NA	+	10	NA	35	1	0A/1C/4G/4T	tgcgtgtgtg
+Test	ABCC	Z_DNA_Motif	5824	5835	12	NA	+	12	NA	38	1	0A/1C/5G/5T	tgtgcgtgtgtg

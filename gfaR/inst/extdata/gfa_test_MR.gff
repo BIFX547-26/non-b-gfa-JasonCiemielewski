@@ -1,0 +1,6 @@
+##gff-version 3
+Test	ABCC	Mirror_Repeat	2827	2864	.	+	.	ID=Test_2827_2864_MR;spacer=18;repeat=10;perms=1;minloop=2864;composition=0A/7C/3G/0T;sequence=cgccgcccgcgccccgcaccccgccgcccgcccgccgc;subset=0
+Test	ABCC	Mirror_Repeat	2845	2867	.	+	.	ID=Test_2845_2867_MR;spacer=1;repeat=11;perms=1;minloop=2867;composition=0A/9C/2G/0T;sequence=ccccgccgcccgcccgccgcccc;subset=0
+Test	ABCC	Mirror_Repeat	2870	2897	.	+	.	ID=Test_2870_2897_MR;spacer=8;repeat=10;perms=1;minloop=2897;composition=0A/8C/2G/0T;sequence=cccccggcccggccgccccccggccccc;subset=0
+Test	ABCC	Mirror_Repeat	2937	2966	.	+	.	ID=Test_2937_2966_MR;spacer=6;repeat=12;perms=1;minloop=2966;composition=0A/8C/3G/1T;sequence=gtgccccccgcctgaccgccgccccccgtg;subset=0
+Test	ABCC	Mirror_Repeat	3014	3065	.	+	.	ID=Test_3014_3065_MR;spacer=32;repeat=10;perms=1;minloop=3065;composition=5A/1C/4G/0T;sequence=gaagaagagcgccgagaacggcatctatagcgtgtccggcgacgagaagaag;subset=0
