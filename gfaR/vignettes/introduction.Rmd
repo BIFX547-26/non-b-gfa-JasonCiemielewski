@@ -50,12 +50,29 @@ results <- gfa_analyze(sequence)
 print(results$gq)
 ```
 
-You can also call individual finding functions:
+### Using Included Test Data
 
-```{r individual}
-apr_results <- find_apr(sequence)
-print(apr_results)
+The package includes sample data for testing and demonstration purposes. You can locate these files using `system.file()`:
+
+```{r extdata}
+# Get the path to the included test FASTA file
+fasta_path <- system.file("extdata", "gfa_test.fasta", package = "gfaR")
+
+# Read the sequence (simple helper for this example)
+read_fasta <- function(file) {
+    lines <- readLines(file)
+    seq_lines <- lines[!grepl("^>", lines)]
+    paste0(seq_lines, collapse = "")
+}
+
+test_seq <- read_fasta(fasta_path)
+results <- gfa_analyze(test_seq)
+
+# View the first few APR results
+head(results$apr)
 ```
+
+You can also find the original "gold standard" GFF and TSV outputs in the same directory to validate your results.
 
 ## References
 
