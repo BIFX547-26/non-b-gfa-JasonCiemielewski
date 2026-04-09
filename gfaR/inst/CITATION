@@ -1,0 +1,10 @@
+bibentry(bibtype = "Article",
+         title = "Non-B DB v2.0: a database of predicted non-B DNA-forming motifs and its associated tools",
+         author = as.person("Regina Z. Cer and Duncan E. Donohue and Uma S. Mudunuri and Nuri A. Temiz and Michael A. Loss and Nathan J. Starner and Goran N. Halusa and Natalia Volfovsky and Ming Yi and Brian T. Luke and Albino Bacolla and Jack R. Collins and Robert M. Stephens"),
+         journal = "Nucleic Acids Research",
+         year = "2013",
+         volume = "41",
+         number = "D1",
+         pages = "D94-D100",
+         doi = "10.1093/nar/gks955",
+         textVersion = "Cer, R. Z., Donohue, D. E., Mudunuri, U. S., Temiz, N. A., Loss, M. A., Starner, N. J., ... & Stephens, R. M. (2013). Non-B DB v2.0: a database of predicted non-B DNA-forming motifs and its associated tools. Nucleic Acids Research, 41(D1), D94-D100.")
