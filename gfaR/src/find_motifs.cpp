@@ -1,3 +1,17 @@
+/*
+ * find_motifs.cpp
+ * 
+ * This code is an Rcpp refactor of the original Genomic Feature Analyzer (GFA)
+ * C-program developed by Cer et al. (2013).
+ * 
+ * Original Authors: Regina Z. Cer, Duncan E. Donohue, Uma S. Mudunuri, et al.
+ * Refactored by: Jason Ciemielewski (2026)
+ * 
+ * Original Publication:
+ * Cer, R. Z., et al. Nucl. Acids Res. (2013) 41 (D1): D94-D100.
+ * doi: 10.1093/nar/gks955
+ */
+
 #include <Rcpp.h>
 #include "gfa.h"
 #include <iostream>

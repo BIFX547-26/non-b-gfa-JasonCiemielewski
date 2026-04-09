@@ -2,8 +2,12 @@ Package: gfaR
 Type: Package
 Title: Genomic Feature Analyzer for Non-B DNA Motifs
 Version: 0.1.0
-Author: Jason Ciemielewski
-Maintainer: Jason Ciemielewski <jason@example.com>
+Authors@R: c(
+    person("Jason", "Ciemielewski", email = "jason@example.com", role = c("aut", "cre")),
+    person("Regina Z.", "Cer", role = "ctb", comment = "Original GFA author"),
+    person("Duncan E.", "Donohue", role = "ctb", comment = "Original GFA author"),
+    person("Robert M.", "Stephens", role = "ctb", comment = "Original GFA author")
+    )
 Description: Refactored R package version of the Genomic Feature Analyzer (GFA) 
     C-program for finding non-B DNA motifs in nucleic acid sequences. The 
     original GFA citation is Regina Z. Cer, Duncan E. Donohue, Uma S. Mudunuri, 
