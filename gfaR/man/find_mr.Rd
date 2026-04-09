@@ -2,17 +2,35 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_mr}
 \alias{find_mr}
-\title{Find Mirror Repeats}
+\title{Find Mirror Repeats (MR)}
 \usage{
 find_mr(dna_seq, minmir = 10, mspacer = 100)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{minmir}{Minimum repeat size (default: 10)}
+\item{minmir}{Minimum size of the repeating unit (default: 10).}
 
-\item{mspacer}{Maximum spacer size (default: 100)}
+\item{mspacer}{Maximum spacer length between mirror units (default: 100).}
+}
+\value{
+A data.frame containing the detected MRs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Spacer length between mirror units.
+  \item \code{len}: Length of the repeating unit.
+  \item \code{num}: Number of permutations/occurrences.
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Minimum loop boundary position.
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag (1 if classified as Triplex).
+}
 }
 \description{
-Find Mirror Repeats
+This function identifies Mirror Repeats (MRs) in a DNA sequence. MRs are 
+associated with triplex DNA structures and consist of two identical 
+sequences in reverse orientation on the same strand.
+}
+\examples{
+find_mr("CCCCGCCGCCCGCCCGCCGCCCC")
 }

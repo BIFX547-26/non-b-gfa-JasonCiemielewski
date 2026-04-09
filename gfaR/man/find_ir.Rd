@@ -2,21 +2,39 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_ir}
 \alias{find_ir}
-\title{Find Inverted Repeats}
+\title{Find Inverted Repeats (IR)}
 \usage{
-find_ir(dna_seq, mincrf = 6, cspacer = 100, cut = 20, shortSpacer = 8)
+find_ir(dna_seq, mincrf = 6, cspacer = 100, cut = 9, shortSpacer = 4)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{mincrf}{Minimum repeat size (default: 6)}
+\item{mincrf}{Minimum size of the repeating unit (default: 6).}
 
-\item{cspacer}{Maximum spacer size (default: 100)}
+\item{cspacer}{Maximum spacer length between inverted units (default: 100).}
 
-\item{cut}{Stem size threshold for short spacer check (default: 20)}
+\item{cut}{Stem size threshold for short spacer constraint (default: 9).}
 
-\item{shortSpacer}{Maximum spacer for short stems (default: 8)}
+\item{shortSpacer}{Maximum spacer for short stems (below 'cut' threshold) (default: 4).}
+}
+\value{
+A data.frame containing the detected IRs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Spacer length between the inverted units.
+  \item \code{len}: Length of the repeating unit (stem length).
+  \item \code{num}: Number of permuations/occurrences (typically 1).
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Minimum loop boundary position.
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag (1 if classified as Cruciform).
+}
 }
 \description{
-Find Inverted Repeats
+This function identifies Inverted Repeats (IRs) in a DNA sequence. IRs are 
+associated with cruciform DNA structures and consist of two sequences that 
+are reverse complements of each other.
+}
+\examples{
+find_ir("GCTAGCAAAAAATGCTAGC")
 }

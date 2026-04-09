@@ -2,15 +2,33 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_zdna}
 \alias{find_zdna}
-\title{Find Z-DNA}
+\title{Find Z-DNA Motifs}
 \usage{
 find_zdna(dna_seq, minZ = 10)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{minZ}{Minimum run size (default: 10)}
+\item{minZ}{Minimum run size required for detection (default: 10).}
+}
+\value{
+A data.frame containing the detected Z-DNA motifs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Score calculated based on purine-pyrimidine patterns.
+  \item \code{len}: Length of the motif.
+  \item \code{num}: Not used for Z-DNA (default: 0).
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Not used for Z-DNA (default: 0).
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag (1 if score above threshold).
+}
 }
 \description{
-Find Z-DNA
+This function identifies potential Z-DNA motifs in a DNA sequence. Z-DNA 
+is a left-handed helical structure favored by alternating purine-pyrimidine 
+sequences, especially (CG)n.
+}
+\examples{
+find_zdna("GTGCACGCGTGCGTG")
 }

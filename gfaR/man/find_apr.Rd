@@ -2,19 +2,37 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_apr}
 \alias{find_apr}
-\title{Find A-Phased Repeats}
+\title{Find A-Phased Repeats (APR)}
 \usage{
-find_apr(dna_seq, minAPR = 4, maxAPR = 9, minATracts = 3)
+find_apr(dna_seq, minAPR = 3, maxAPR = 9, minATracts = 3)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{minAPR}{Minimum length of A-tract (default: 4)}
+\item{minAPR}{Minimum length of an A-tract (default: 3).}
 
-\item{maxAPR}{Maximum length of A-tract (default: 9)}
+\item{maxAPR}{Maximum length of an A-tract (default: 9).}
 
-\item{minATracts}{Minimum number of A-tracts (default: 3)}
+\item{minATracts}{Minimum number of consecutive A-tracts required to define an APR (default: 3).}
+}
+\value{
+A data.frame containing the detected APRs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Not used for APR (default: 0).
+  \item \code{len}: Number of A-tracts in the repeat.
+  \item \code{num}: Number of A-tracts in the repeat (redundant with len).
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Not used for APR (default: 0).
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag.
+}
 }
 \description{
-Find A-Phased Repeats
+This function identifies A-Phased Repeats (APRs) in a DNA sequence. APRs are
+associated with bent DNA structures and are characterized by runs of
+Adenine (A) or Thymine (T) bases with a specific periodicity.
+}
+\examples{
+find_apr("TTTTGAAGAGGAAATGAAGGGTATT")
 }

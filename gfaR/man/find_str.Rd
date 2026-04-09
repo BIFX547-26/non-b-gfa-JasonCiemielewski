@@ -2,21 +2,39 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_str}
 \alias{find_str}
-\title{Find Short Tandem Repeats}
+\title{Find Short Tandem Repeats (STR)}
 \usage{
-find_str(dna_seq, minSTR = 1, maxSTR = 6, minSTRlen = 10, minReps = 3)
+find_str(dna_seq, minSTR = 1, maxSTR = 9, minSTRlen = 10, minReps = 3)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{minSTR}{Minimum unit size (default: 1)}
+\item{minSTR}{Minimum unit size (default: 1).}
 
-\item{maxSTR}{Maximum unit size (default: 6)}
+\item{maxSTR}{Maximum unit size (default: 9).}
 
-\item{minSTRlen}{Minimum total length (default: 10)}
+\item{minSTRlen}{Minimum total length of the repeat region (default: 10).}
 
-\item{minReps}{Minimum number of repeats (default: 3)}
+\item{minReps}{Minimum number of repeats required (default: 3).}
+}
+\value{
+A data.frame containing the detected STRs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Classification code for the STR type.
+  \item \code{len}: Unit size of the repeat.
+  \item \code{num}: Number of full repeating units.
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Number of additional partial matching bases at the end.
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag.
+}
 }
 \description{
-Find Short Tandem Repeats
+This function identifies Short Tandem Repeats (STRs) or microsatellites in 
+a DNA sequence. STRs consist of short repeating units (1-9 bp) occurring 
+multiple times in tandem.
+}
+\examples{
+find_str("GTGTGTGTGTGT")
 }

@@ -2,17 +2,34 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_gq}
 \alias{find_gq}
-\title{Find G-quadruplexes}
+\title{Find G-quadruplexes (GQ)}
 \usage{
 find_gq(dna_seq, minGQ = 3, maxGQspacer = 7)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{minGQ}{Minimum G-run size (default: 3)}
+\item{minGQ}{Minimum size of the Guanine (G) runs (default: 3).}
 
-\item{maxGQspacer}{Maximum loop size (default: 7)}
+\item{maxGQspacer}{Maximum spacer (loop) length between G-runs (default: 7).}
+}
+\value{
+A data.frame containing the detected GQs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Not used for GQ (default: 0).
+  \item \code{len}: Maximum G-run size found within the motif.
+  \item \code{num}: Number of G-runs found in the motif.
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Number of consecutive G-islands identified.
+  \item \code{strand}: DNA strand (0 for plus, 1 for minus).
+  \item \code{special}: Internal classification flag.
+}
 }
 \description{
-Find G-quadruplexes
+This function identifies potential G-quadruplex (GQ) motifs in a DNA sequence.
+G-quadruplexes are four-stranded DNA structures formed by G-rich sequences.
+}
+\examples{
+find_gq("GGGAAGGAGGGAGAGACGGGAGGG")
 }

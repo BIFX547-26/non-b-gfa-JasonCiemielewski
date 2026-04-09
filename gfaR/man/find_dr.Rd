@@ -2,19 +2,37 @@
 % Please edit documentation in R/find_motifs.R
 \name{find_dr}
 \alias{find_dr}
-\title{Find Direct Repeats}
+\title{Find Direct Repeats (DR)}
 \usage{
-find_dr(dna_seq, mindir = 10, maxdir = 100, dspacer = 100)
+find_dr(dna_seq, mindir = 10, maxdir = 300, dspacer = 10)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 
-\item{mindir}{Minimum repeat size (default: 10)}
+\item{mindir}{Minimum size of the repeating unit (default: 10).}
 
-\item{maxdir}{Maximum repeat size (default: 100)}
+\item{maxdir}{Maximum size of the repeating unit (default: 300).}
 
-\item{dspacer}{Maximum spacer size (default: 100)}
+\item{dspacer}{Maximum spacer length between repeating units (default: 10).}
+}
+\value{
+A data.frame containing the detected DRs with columns:
+\itemize{
+  \item \code{start}: 1-based start position of the motif.
+  \item \code{loop}: Spacer length between repeating units.
+  \item \code{len}: Length of the repeating unit.
+  \item \code{num}: Number of full repeating units found.
+  \item \code{end}: 1-based end position of the motif.
+  \item \code{sub}: Number of additional bases matching the repeating unit (partial repeat).
+  \item \code{strand}: DNA strand (0 for plus).
+  \item \code{special}: Internal classification flag (1 if classified as Slipped DNA).
+}
 }
 \description{
-Find Direct Repeats
+This function identifies Direct Repeats (DRs) in a DNA sequence. DRs are 
+associated with slipped-strand DNA structures and consist of two or more 
+identical or nearly identical sequences in the same orientation.
+}
+\examples{
+find_dr("ACCCCTACCCCTACCCCTACCCC")
 }

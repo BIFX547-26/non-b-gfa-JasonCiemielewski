@@ -7,11 +7,29 @@
 gfa_analyze(dna_seq)
 }
 \arguments{
-\item{dna_seq}{DNA sequence string}
+\item{dna_seq}{A character string representing the DNA sequence to analyze.}
 }
 \value{
-A named list of data.frames for each motif type
+A named list of data.frames, where each element corresponds to a 
+motif type:
+\itemize{
+  \item \code{apr}: A-Phased Repeats.
+  \item \code{dr}: Direct Repeats (Slipped DNA).
+  \item \code{gq}: G-quadruplexes.
+  \item \code{ir}: Inverted Repeats (Cruciforms).
+  \item \code{mr}: Mirror Repeats (Triplexes).
+  \item \code{str}: Short Tandem Repeats.
+  \item \code{zdna}: Z-DNA motifs.
+}
 }
 \description{
-Analyze all non-B DNA motifs in a sequence
+This is a master function that runs all available motif-finding algorithms 
+on a single DNA sequence. It consolidates results for APR, DR, GQ, IR, MR, 
+STR, and Z-DNA into a structured list.
+}
+\examples{
+seq <- "AGTGCAACCCAGAGGGCAGGATTTCCTGCTGGACTTTGAAATCCAACCCGGTCACCTACCCGCGCGACTG"
+all_motifs <- gfa_analyze(seq)
+names(all_motifs)
+head(all_motifs$gq)
 }
