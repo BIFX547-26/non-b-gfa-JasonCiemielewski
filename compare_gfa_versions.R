@@ -9,7 +9,8 @@ c_program  <- file.path(c_src_dir, "gfa.exe")
 # Define and create output directory
 output_dir <- "test_data/comparison_results"
 if (!dir.exists(output_dir)) dir.create(output_dir, recursive = TRUE)
-output_prefix <- file.path(output_dir, "c_output")
+c_output_prefix <- file.path(output_dir, "c_output")
+r_output_prefix <- file.path(output_dir, "r_output")
 
 # 2. Auto-compile C program if missing
 if (!file.exists(c_program)) {
@@ -32,17 +33,13 @@ if (!file.exists(c_program)) {
                            c_program)
     
     system(compile_cmd)
-    
-    if (!file.exists(c_program)) {
-        stop("Failed to compile original C program. Please ensure a C compiler (gcc) is available.")
-    }
 }
 
 # 3. Run the original C program
 cat("--- Running original C program ---\n")
-system(paste(c_program, "-seq", fasta_file, "-chrom Test -out", output_prefix))
+system(paste(c_program, "-seq", fasta_file, "-chrom Test -out", c_output_prefix))
 
-# 4. Run the R package
+# 4. Run the R package and export results to disk
 cat("\n--- Running gfaR R package ---\n")
 read_fasta <- function(file) {
     lines <- readLines(file)
@@ -51,6 +48,14 @@ read_fasta <- function(file) {
 }
 dna_seq <- read_fasta(fasta_file)
 r_results <- gfa_analyze(dna_seq)
+
+# Save R results to CSV files for inspection
+cat(sprintf("Saving R results to %s...\n", output_dir))
+for (motif_name in names(r_results)) {
+    write.csv(r_results[[motif_name]], 
+              file = sprintf("%s_%s.csv", r_output_prefix, toupper(motif_name)), 
+              row.names = FALSE)
+}
 
 # 5. Define enhanced comparison function
 compare_results <- function(r_df, gff_file, motif_name) {
@@ -63,19 +68,13 @@ compare_results <- function(r_df, gff_file, motif_name) {
         return()
     }
     
-    # Read C GFF output
     c_data <- read.table(gff_file, comment.char = "#", sep = "\t", stringsAsFactors = FALSE)
     c_comp <- data.frame(Version = "C", start = c_data[[4]], end = c_data[[5]])
-    
-    # Prepare R data for comparison
     r_comp <- data.frame(Version = "R", start = r_df$start, end = r_df$end)
     
-    # Show counts
     cat(sprintf(" Counts Found -> C: %d | R: %d\n\n", nrow(c_comp), nrow(r_comp)))
     
-    # Create side-by-side view
     max_rows <- min(10, nrow(c_comp), nrow(r_comp))
-    
     if (max_rows > 0) {
         cat(" Side-by-Side Comparison (First 10 matches):\n")
         comparison_table <- data.frame(
@@ -93,7 +92,6 @@ compare_results <- function(r_df, gff_file, motif_name) {
         print(comparison_table, row.names = FALSE)
     }
     
-    # Summary Statement
     matches <- sum(r_df$start %in% c_comp$start & r_df$end %in% c_comp$end)
     if (matches == nrow(c_comp) && nrow(c_comp) == nrow(r_comp)) {
         cat("\n RESULT: SUCCESS - All records are identical.\n")
@@ -103,10 +101,10 @@ compare_results <- function(r_df, gff_file, motif_name) {
 }
 
 # 6. Execute comparisons
-compare_results(r_results$apr, paste0(output_prefix, "_APR.gff"), "A-Phased Repeats (APR)")
-compare_results(r_results$dr,  paste0(output_prefix, "_DR.gff"),  "Direct Repeats (DR)")
-compare_results(r_results$gq,  paste0(output_prefix, "_GQ.gff"),  "G-quadruplexes (GQ)")
-compare_results(r_results$ir,  paste0(output_prefix, "_IR.gff"),  "Inverted Repeats (IR)")
-compare_results(r_results$mr,  paste0(output_prefix, "_MR.gff"),  "Mirror Repeats (MR)")
-compare_results(r_results$str, paste0(output_prefix, "_STR.gff"), "Short Tandem Repeats (STR)")
-compare_results(r_results$zdna, paste0(output_prefix, "_Z.gff"),   "Z-DNA Motifs")
+compare_results(r_results$apr, paste0(c_output_prefix, "_APR.gff"), "A-Phased Repeats (APR)")
+compare_results(r_results$dr,  paste0(c_output_prefix, "_DR.gff"),  "Direct Repeats (DR)")
+compare_results(r_results$gq,  paste0(c_output_prefix, "_GQ.gff"),  "G-quadruplexes (GQ)")
+compare_results(r_results$ir,  paste0(c_output_prefix, "_IR.gff"),  "Inverted Repeats (IR)")
+compare_results(r_results$mr,  paste0(c_output_prefix, "_MR.gff"),  "Mirror Repeats (MR)")
+compare_results(r_results$str, paste0(c_output_prefix, "_STR.gff"), "Short Tandem Repeats (STR)")
+compare_results(r_results$zdna, paste0(c_output_prefix, "_Z.gff"),   "Z-DNA Motifs")
