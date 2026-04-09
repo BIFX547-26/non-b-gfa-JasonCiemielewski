@@ -1,6 +1,9 @@
 # Genomic Feature Analyzer (GFA) - R Refactor
 
-This project contains the **gfaR** R package, a high-performance refactor of the original Genomic Feature Analyzer (GFA) C-program. GFA is designed to identify non-B DNA motifs in genomic sequences, which are associated with various biological processes and genomic instabilities.
+This project contains the **gfaR** R package, a refactor of the original Genomic Feature Analyzer (GFA) C-program. GFA is designed to identify non-B DNA motifs in genomic sequences, which are associated with various biological processes and genomic instabilities. The original GFA program was authored by 
+Cer, R. Z., Donohue, D. E., Mudunuri, U. S., Temiz, N. A., Loss, M. A., Starner, N. J., ... & Stephens, R. M. (2013). **Non-B DB v2.0: a database of predicted non-B DNA-forming motifs and its associated tools.** *Nucleic Acids Research*, 41(D1), D94-D100. doi: 10.1093/nar/gks955.
+
+The gfaR pacakge and this repo was generated through the use of Gemini CLI
 
 ## Project Structure
 
